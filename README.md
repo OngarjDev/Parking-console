@@ -4,7 +4,7 @@
 please open Encoding UTF-8 because Program don't see Thai language
 
 ## support
-python เท่านั้น
+python 3.10.5
 
 ## โจทย์
 เรื่อง คิดค่าที่จอดรถ
