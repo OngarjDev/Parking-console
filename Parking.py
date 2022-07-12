@@ -16,10 +16,14 @@ if(int(TimeOut[0:2]) >= int(TimeIn[0:2])):#ป้องกันตัวเล�
 else:
     timehour = int(TimeIn[0:2])-int(TimeOut[0:2])
 
-if(int(TimeOut[4:6]) >= int(TimeIn[4:6])):#ป้องกันตัวเลขติดลบแล้วคำนวณค่าไม่ได้
-    timemin = int(TimeOut[4:6])-int(TimeIn[4:6])
+if(int(TimeOut[3:5]) >= int(TimeIn[3:5])):#ป้องกันตัวเลขติดลบแล้วคำนวณค่าไม่ได้
+    timemin = int(TimeOut[3:5])-int(TimeIn[3:5])
 else:
-    timemin = int(TimeIn[4:6])-int(TimeOut[4:6])
+    timemin = int(TimeIn[3:5])-int(TimeOut[3:5])
 
-print(timehour)
-print(timemin)
+print("เวลาจอดของคุณคือ : "+ str(timehour) + " ชั่วโมง " + str(timemin) + " นาที ")
+
+if(timemin < 15 and timehour == 0):
+    print("Free")
+elif(timehour < 3):
+    print("")

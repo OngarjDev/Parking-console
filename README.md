@@ -1,6 +1,8 @@
 # Parking-console
 ระบบคำนวณค่าจอดรถผ่าน console 
 
+please open Encoding UTF-8 because Program don't see Thai language
+
 ## support
 python เท่านั้น
 
