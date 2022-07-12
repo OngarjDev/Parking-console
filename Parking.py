@@ -1,4 +1,7 @@
 # please open Encoding UTF-8 because Program don't see Thai language
+from time import time
+
+
 try:
     x = 0
     while x == 0: # == คือการเปรียบเทียบค่า
@@ -26,6 +29,7 @@ try:
 
     print("เวลาจอดของคุณคือ : "+ str(timehour) + " ชั่วโมง " + str(timemin) + " นาที ")
 
+
     if(timemin < 15 and timehour == 0):#จอดรถไม่เกิน 15 นาที ไม่คิดค่าบริการ
         print("Free")
     elif(timehour < 3):#จอดรถเกิน 15 นาที แต่ไม่เกิน 3 ชั่วโมง คิดค่าบริการชั่วโมงละ 10 บาท 
@@ -40,7 +44,7 @@ try:
         total = timehour * 20
         stringtotal = str(total)
         print("ค่าบริการ "+stringtotal+" บาท")
-    else:#จอดรถเกิน 6 ชั่วโมงขึ้นไป เหมาจ่ายวันละ 200 บาท
+    elif(timehour > 6):#จอดรถเกิน 6 ชั่วโมงขึ้นไป เหมาจ่าย 200 บาท
         print("ค่าบริการ 200 บาท")
 except:
     print("ระบบตรวจพบความผิดปกติ โปรดตรวจสอบให้ว่าระบบทำงานอย่างถูกต้อง")
